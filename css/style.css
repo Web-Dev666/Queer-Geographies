@@ -70,7 +70,7 @@ footer {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px 0 40px 0;
     overflow: hidden;
 }
 
@@ -154,12 +154,15 @@ li.dropdown {
         letter-spacing: .2rem;
         /* padding: 0px 10px 0px 10px; */
         justify-content: left;
+        margin: 0px;
     }
     h3 {
         font-size: 1rem;
-        text-align: center;
-        padding: 20px;
+        text-align: left;
+        padding: 20px 20px 45px 0px;
         color: gray;
+        font-weight: lighter;
+        
     }
     
     h2 {
@@ -167,6 +170,7 @@ li.dropdown {
         text-align: left;
         padding: 20px 20px 20px 0px;
         color: #ff00ff;
+        font-weight: lighter;
     }
 
     footer {
