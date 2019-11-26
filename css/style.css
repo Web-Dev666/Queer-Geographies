@@ -36,70 +36,195 @@ p {
     padding: 0 5px;
 }
 
-
-/* Headers */
-
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
-    color: #ffb406;
-    font-size: 6rem;
-    letter-spacing: .4rem;
-    padding: 0px 10px 0px 10px;
-    display: flex;
-    justify-content: center;
-}
-
-footer {
-    height: auto;
-    text-align: right;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: none;
-    padding: 0px 0px 5px 20px;
-    list-style-type: inline-block;
-}
-
-/* Main nav */
-
-nav {
-    height: auto;
-    }
-
-
-li {
-    text-align: center;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* list-style-type: inline-block; */
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-
-}
-
 a {
     text-decoration: none;
 }
-li a:hover {
 
-    color: #ffb406;
-    text-decoration-line: line-through;
+
+/* layout */
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    height: 100%;
+}
+
+.page-container>header,
+
+body,
+footer {
+    padding: 30px;
+}
+
+.aside-1 {
+    height: 350px;
+    width: 300px;
+    background: #ff00ff;
+
+
 }
 
 
 
+/* nav */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    width: 140px;
+}
 
 
-/* Becky suggests looking up the syntax for media query on W3 schools etc. */
-/* this declaration applies only when disply is 700px wide or larger */
-@media only screen and (min-width: 700px) {
-    body {
-        background-color: white;
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+        /* render 6 columns in this container and make each equal in width */
     }
 
+    .header-container,
+    .nav-container,
+    .footer-container {
+        grid-column: span 6;
+
+        /* tell the header, nav, and footer elements to span all six columns */
+    }
+
+    .body-container {
+        grid-column: span 4;
+
+        /* tell the .container section to span only 4 of the 6 columns */
+    }
+
+    .aside-container {
+        grid-column: span 2;
+
+    }
+
+
+    /* Headers */
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: bold;
+        color: #ff00ff;
+        font-size: 3rem;
+        letter-spacing: .2rem;
+        /* padding: 0px 10px 0px 10px; */
+        justify-content: left;
+    }
+    h3 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 20px;
+        color: gray;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 20px 20px 20px 0px;
+        color: #ff00ff;
+    }
+
+    footer {
+        height: auto;
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: none;
+        padding: 0px 0px 5px 20px;
+        list-style-type: inline-block;
+    }
+
+    body {
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Main nav */
+
+    nav {
+        height: auto;
+    }
+
+
     li {
-        width: 12%;
-        display: inline-block;
+        text-align: left;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        /* list-style-type: inline-block; */
+        align-items: left;
+
+
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li a:hover {
+
+        color: #ff00ff;
+        text-decoration-line: underline;
+    }
+
+
+
+
+
+    /* Becky suggests looking up the syntax for media query on W3 schools etc. */
+    /* this declaration applies only when disply is 700px wide or larger */
+    @media only screen and (min-width: 700px) {
+        body {
+            background-color: white;
+        }
+
+        li {
+            width: 12%;
+            display: inline-block;
+        }
     }
 }
