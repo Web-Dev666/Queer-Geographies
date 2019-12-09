@@ -49,12 +49,12 @@ a {
     height: 100%;
 }
 
-.page-container>header,
+/* .page-container>header,
 
 body,
 footer {
     padding: 30px;
-}
+} */
 
 .aside-1 {
     height: 350px;
@@ -232,3 +232,9 @@ li.dropdown {
         }
     }
 }
+
+.studio-cover {
+    background-image: url(../images/studio-cover-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: none;
