@@ -70,7 +70,7 @@ footer {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px 0 40px 0;
+    padding: 10px 0 10px 0;
     overflow: hidden;
 }
 
@@ -123,6 +123,7 @@ li.dropdown {
         grid-template-columns: repeat(6, 1fr);
         /* render 6 columns in this container and make each equal in width */
     }
+}
 
     .header-container,
     .nav-container,
@@ -148,7 +149,6 @@ li.dropdown {
 
     h1 {
         font-family: Arial, Helvetica, sans-serif;
-        font-style: bold;
         color: #ff00ff;
         font-size: 3rem;
         letter-spacing: .2rem;
@@ -166,7 +166,7 @@ li.dropdown {
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 4rem;
         text-align: left;
         padding: 20px 20px 20px 0px;
         color: #ff00ff;
@@ -196,13 +196,8 @@ li.dropdown {
 
     li {
         text-align: left;
-        font-size: 24px;
+        font-size: 45px;
         font-family: Arial, Helvetica, sans-serif;
-        /* list-style-type: inline-block; */
-        align-items: left;
-
-
-
     }
 
     a {
@@ -210,7 +205,6 @@ li.dropdown {
     }
 
     li a:hover {
-
         color: #ff00ff;
         text-decoration-line: underline;
     }
@@ -231,11 +225,72 @@ li.dropdown {
             display: inline-block;
         }
     }
-}
 
+
+
+.page-description {
+    font-size: 2rem;
+    text-align: justify;
+}
 .studio-cover {
     background-image: url(../images/studio-cover-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: none;
+    height: 216px;
 }
+
+.studio-header {
+    padding: 40px;
+    font-size: 6rem;
+    text-align: left;
+}
+
+/* Studio Items */
+
+.studio-card-1 {
+    background-image: url(../images/studio-card-1.jpg);
+}
+
+/* second grid layout attempt */
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 600px;
+    padding: 0px 150px;
+}
+
+.container-2>* {
+    background-color: #333333
+}
+
+.my-card{
+    height: 300px;
+    width:300px;
+    background-color: #333333;
+    background-image: url(../images/studio-card-1.jpg);
+
+}
+
+.my-card-2{
+    background-color: chocolate;
+}
+
+@media only screen and (min-width: 600px) {
+    .container-2{
+      grid-template-columns: repeat(3, 1fr);
+    }
+ 
+    .container-2{
+      grid-column: span 3;
+    }
+
+   .my-card{
+        grid-column: span 1;
+    }
+}
+
+
+ 
