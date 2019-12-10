@@ -274,7 +274,7 @@ li a:hover {
     height: 300px;
     width: 300px;
     background-color: #333333;
-    background-image: url(../images/studio-card-1.jpg);
+    
     position: relative;
 
 }
@@ -287,6 +287,18 @@ li a:hover {
 .studio-card-1 {
     position: relative;
     background-image: url(../images/studio-card-1.jpg);
+}
+.studio-card-2 {
+    background-image: url(../images/studio-card-2.jpg);
+}
+.studio-card-3 {
+    background-image: url(../images/studio-card-3.jpg);
+}
+.studio-card-4 {
+    background-image: url(../images/studio-card-4.jpg);
+}
+.studio-card-5 {
+    background-image: url(../images/studio-card-5.jpg);
 }
 
 .card-link {
