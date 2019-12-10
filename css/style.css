@@ -129,106 +129,107 @@ li.dropdown {
     }
 }
 
-    .header-container,
-    .nav-container,
-    .footer-container {
-        grid-column: span 6;
+.header-container,
+.nav-container,
+.footer-container {
+    grid-column: span 6;
 
-        /* tell the header, nav, and footer elements to span all six columns */
-    }
+    /* tell the header, nav, and footer elements to span all six columns */
+}
 
-    .body-container {
-        grid-column: span 4;
+.body-container {
+    grid-column: span 4;
 
-        /* tell the .container section to span only 4 of the 6 columns */
-    }
+    /* tell the .container section to span only 4 of the 6 columns */
+}
 
-    .aside-container {
-        grid-column: span 2;
+.aside-container {
+    grid-column: span 2;
 
-    }
+}
 
 
-    /* Headers */
+/* Headers */
 
-    h1 {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #ff00ff;
-        font-size: 3rem;
-        letter-spacing: .2rem;
-        /* padding: 0px 10px 0px 10px; */
-        justify-content: left;
-        margin: 0px;
-    }
-    h3 {
-        font-size: 1rem;
-        text-align: left;
-        padding: 20px 20px 45px 0px;
-        color: gray;
-        font-weight: lighter;
-        
-    }
-    
-    h2 {
-        font-size: 4rem;
-        text-align: left;
-        padding: 20px 20px 20px 0px;
-        color: #ff00ff;
-        font-weight: lighter;
-    }
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff00ff;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    /* padding: 0px 10px 0px 10px; */
+    justify-content: left;
+    margin: 0px;
+}
 
-    footer {
-        height: auto;
-        text-align: right;
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: none;
-        padding: 0px 0px 5px 20px;
-        list-style-type: inline-block;
-    }
+h3 {
+    font-size: 1rem;
+    text-align: left;
+    padding: 20px 20px 45px 0px;
+    color: gray;
+    font-weight: lighter;
 
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: left;
+    padding: 20px 20px 20px 0px;
+    color: #ff00ff;
+    font-weight: lighter;
+}
+
+footer {
+    height: auto;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: none;
+    padding: 0px 0px 5px 20px;
+    list-style-type: inline-block;
+}
+
+body {
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main nav */
+
+nav {
+    height: auto;
+}
+
+
+li {
+    text-align: left;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #ff00ff;
+    text-decoration-line: underline;
+}
+
+
+
+
+
+/* Becky suggests looking up the syntax for media query on W3 schools etc. */
+/* this declaration applies only when disply is 700px wide or larger */
+@media only screen and (min-width: 700px) {
     body {
-        height: auto;
-        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
     }
-
-    /* Main nav */
-
-    nav {
-        height: auto;
-    }
-
 
     li {
-        text-align: left;
-        font-size: 45px;
-        font-family: Arial, Helvetica, sans-serif;
+        width: 20%;
+        display: inline-block;
     }
-
-    a {
-        text-decoration: none;
-    }
-
-    li a:hover {
-        color: #ff00ff;
-        text-decoration-line: underline;
-    }
-
-
-
-
-
-    /* Becky suggests looking up the syntax for media query on W3 schools etc. */
-    /* this declaration applies only when disply is 700px wide or larger */
-    @media only screen and (min-width: 700px) {
-        body {
-            background-color: white;
-        }
-
-        li {
-            width: 20%;
-            display: inline-block;
-        }
-    }
+}
 
 
 
@@ -236,6 +237,7 @@ li.dropdown {
     font-size: 2rem;
     text-align: justify;
 }
+
 .studio-cover {
     background-image: url(../images/studio-cover-1.jpg);
     background-size: cover;
@@ -252,20 +254,8 @@ li.dropdown {
 
 /* Studio Items */
 
-.studio-card-1 {
-    background-image: url(../images/studio-card-1.jpg);
-}
 
-.card-link {
-    font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none
-    ;
-}
-.card-link:hover {
-    color: #ff00ff;
-    text-decoration-line: underline;
-}
+
 /* second grid layout attempt */
 
 .container-2 {
@@ -280,11 +270,12 @@ li.dropdown {
     background-color: #333333
 }
 
-.my-card{
+.my-card {
     height: 300px;
-    width:300px;
+    width: 300px;
     background-color: #333333;
     background-image: url(../images/studio-card-1.jpg);
+    position: relative;
 
 }
 
@@ -293,23 +284,49 @@ li.dropdown {
     background-image: none;
 }
 
-.my-card-2{
-    background-color: chocolate;
+.studio-card-1 {
+    position: relative;
+    background-image: url(../images/studio-card-1.jpg);
 }
 
+.card-link {
+    font-size: 45px;
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+.card-link:hover {
+
+    color: #ff00ff;
+    text-decoration-line: underline;
+}
+
+.card-poem{
+    font-size: 45px;
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+.card-poem:hover {
+
+    color: black;
+}
 @media only screen and (min-width: 600px) {
-    .container-2{
-      grid-template-columns: repeat(3, 1fr);
-    }
- 
-    .container-2{
-      grid-column: span 3;
+    .container-2 {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-   .my-card{
+    .container-2 {
+        grid-column: span 3;
+    }
+
+    .my-card {
         grid-column: span 1;
     }
 }
-
-
- 
