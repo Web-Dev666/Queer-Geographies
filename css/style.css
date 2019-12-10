@@ -274,6 +274,11 @@ li.dropdown {
 
 }
 
+.my-card:hover {
+    background-color: rgb(255, 0, 179);
+    background-image: none;
+}
+
 .my-card-2{
     background-color: chocolate;
 }
