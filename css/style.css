@@ -49,6 +49,10 @@ a {
     height: 100%;
 }
 
+main {
+    padding: 60px 0px 20px 0px;
+}
+
 /* .page-container>header,
 
 body,
@@ -252,6 +256,16 @@ li.dropdown {
     background-image: url(../images/studio-card-1.jpg);
 }
 
+.card-link {
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none
+    ;
+}
+.card-link:hover {
+    color: #ff00ff;
+    text-decoration-line: underline;
+}
 /* second grid layout attempt */
 
 .container-2 {
