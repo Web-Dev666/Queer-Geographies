@@ -151,14 +151,14 @@ li.dropdown {
 
 /* Headers */
 
-h1 {
+h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: #ff00ff;
     font-size: 3rem;
-    letter-spacing: .2rem;
     /* padding: 0px 10px 0px 10px; */
     justify-content: left;
     margin: 0px;
+    font-weight: normal;
 }
 
 h3 {
@@ -170,13 +170,15 @@ h3 {
 
 }
 
-h2 {
+h1 {
     font-size: 4rem;
     text-align: left;
-    padding: 20px 20px 20px 0px;
+    /* padding: 20px 20px 20px 0px; */
     color: #ff00ff;
     font-weight: lighter;
 }
+
+
 
 footer {
     height: auto;
@@ -256,7 +258,7 @@ li a:hover {
 
 
 
-/* second grid layout attempt */
+/* Studio Page Layout */
 
 .container-2 {
     display: grid;
@@ -266,69 +268,6 @@ li a:hover {
     padding: 0px 150px;
 }
 
-.container-2>* {
-    background-color: #333333
-}
-
-.my-card {
-    height: 300px;
-    width: 300px;
-    background-color: #333333;
-    
-    position: relative;
-
-}
-
-.my-card:hover {
-    background-color: white;
-    background-image: none;
-}
-
-.studio-card-1 {
-    position: relative;
-    background-image: url(../images/studio-card-1.jpg);
-}
-.studio-card-2 {
-    background-image: url(../images/studio-card-2.jpg);
-}
-.studio-card-3 {
-    background-image: url(../images/studio-card-3.jpg);
-}
-.studio-card-4 {
-    background-image: url(../images/studio-card-4.jpg);
-}
-.studio-card-5 {
-    background-image: url(../images/studio-card-5.jpg);
-}
-
-.card-link {
-    font-size: 45px;
-    color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-}
-.card-link:hover {
-
-    color: #ff00ff;
-    text-decoration-line: underline;
-}
-
-.card-poem{
-    font-size: 45px;
-    color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-}
-.card-poem:hover {
-
-    color: black;
-}
 @media only screen and (min-width: 600px) {
     .container-2 {
         grid-template-columns: repeat(3, 1fr);
@@ -342,3 +281,90 @@ li a:hover {
         grid-column: span 1;
     }
 }
+
+.container-2>* {
+    background-color: #333333
+}
+
+/* Studio Cards */
+
+.my-card {
+    height: 300px;
+    width: 300px;
+    background-color: #333333;
+
+    position: relative;
+
+}
+
+.my-card:hover {
+    background-color: white;
+    background-image: none;
+}
+
+.card-link {
+    font-size: 45px;
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+.card-link:hover {
+
+    color: #ff00ff;
+    text-decoration-line: underline;
+}
+
+/* Individual card images  */
+.studio-card-1 {
+    position: relative;
+    background-image: url(../images/studio-card-1.jpg);
+}
+
+.studio-card-2 {
+    background-image: url(../images/studio-card-2.jpg);
+}
+
+.studio-card-3 {
+    background-image: url(../images/studio-card-3.jpg);
+}
+
+.studio-card-4 {
+    background-image: url(../images/studio-card-4.jpg);
+}
+
+.studio-card-5 {
+    background-image: url(../images/studio-card-5.jpg);
+}
+
+
+
+
+
+/* Individual Project Styling */
+.card-poem {
+    font-size: 45px;
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+.card-poem:hover {
+    color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-title {
+      padding: 40px 0;
+  }
